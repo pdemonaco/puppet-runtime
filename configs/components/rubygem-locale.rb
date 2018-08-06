@@ -4,7 +4,7 @@ component "rubygem-locale" do |pkg, settings, platform|
   pkg.version "2.1.2"
   pkg.md5sum "def1e89d1d3126a0c684d3b7b20d88d4"
   pkg.url "https://rubygems.org/downloads/locale-#{pkg.get_version}.gem"
-  pkg.mirror "#{settings[:buildsources_url]}/locale-#{pkg.get_version}.gem"
+  #pkg.mirror "#{settings[:buildsources_url]}/locale-#{pkg.get_version}.gem"
   pkg.environment "GEM_HOME", (settings[:puppet_gem_vendor_dir] || settings[:gem_home])
 
   pkg.install do
