@@ -4,7 +4,7 @@ component "rubygem-hocon" do |pkg, settings, platform|
   pkg.version "1.2.5"
   pkg.md5sum "e7821d3a731ab617320ccfa4f67f886b"
   pkg.url "https://rubygems.org/downloads/hocon-#{pkg.get_version}.gem"
-  pkg.mirror "#{settings[:buildsources_url]}/hocon-#{pkg.get_version}.gem"
+  #pkg.mirror "#{settings[:buildsources_url]}/hocon-#{pkg.get_version}.gem"
 
   install_steps = ["#{settings[:gem_install]} hocon-#{pkg.get_version}.gem"]
 

@@ -33,7 +33,7 @@ component 'augeas' do |pkg, settings, platform|
   end
 
   pkg.url "http://download.augeas.net/augeas-#{pkg.get_version}.tar.gz"
-  pkg.mirror "#{settings[:buildsources_url]}/augeas-#{pkg.get_version}.tar.gz"
+  #pkg.mirror "#{settings[:buildsources_url]}/augeas-#{pkg.get_version}.tar.gz"
 
   pkg.build_requires "libxml2"
 
