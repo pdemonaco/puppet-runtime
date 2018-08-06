@@ -23,13 +23,13 @@ component "yaml-cpp" do |pkg, settings, platform|
   elsif platform.is_aix?
     # Moved to platform def, do nothing
   else
-    pkg.build_requires "pl-gcc"
+    pkg.build_requires "gcc"
     pkg.build_requires "make"
-    pkg.build_requires "pl-cmake"
+    pkg.build_requires "cmake3"
   end
 
   # Build-time Configuration
-  cmake = "#{settings[:tools_root]}/bin/cmake"
+  cmake = '/usr/bin/cmake3'
   cmake_toolchain_file = "-DCMAKE_TOOLCHAIN_FILE=#{settings[:tools_root]}/pl-build-toolchain.cmake"
   make = 'make'
   mkdir = 'mkdir'

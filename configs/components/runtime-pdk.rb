@@ -33,7 +33,7 @@ component "runtime-pdk" do |pkg, settings, platform|
     # Do nothing
 
   else # Linux and Solaris systems
-    libdir = "/opt/pl-build-tools/lib64"
+    libdir = "/usr/lib64"
     pkg.add_source "file://resources/files/runtime/runtime.sh"
     pkg.install do
       "bash runtime.sh #{libdir}"

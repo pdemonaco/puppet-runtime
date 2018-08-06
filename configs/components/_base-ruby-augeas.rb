@@ -17,7 +17,7 @@ pkg.url "http://download.augeas.net/ruby/ruby-augeas-#{pkg.get_version}.tgz"
 pkg.build_requires "ruby-#{ruby_version}"
 pkg.build_requires "augeas"
 
-pkg.environment "PATH", "$(PATH):/opt/pl-build-tools/bin:/usr/local/bin:/opt/csw/bin:/usr/ccs/bin:/usr/sfw/bin"
+pkg.environment "PATH", "$(PATH):/usr/local/bin:/opt/csw/bin:/usr/ccs/bin:/usr/sfw/bin"
 if platform.is_aix?
   # We still use pl-gcc for AIX 7.1
   pkg.environment "CC", "/opt/pl-build-tools/bin/gcc"

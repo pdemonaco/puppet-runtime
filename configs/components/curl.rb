@@ -27,7 +27,7 @@ component 'curl' do |pkg, settings, platform|
     pkg.environment "PATH" => "$(shell cygpath -u #{settings[:gcc_bindir]}):$(PATH)"
     pkg.environment "CYGWIN" => settings[:cygwin]
   else
-    pkg.environment "PATH" => "/opt/pl-build-tools/bin:$(PATH):#{settings[:bindir]}"
+    pkg.environment "PATH" => "$(PATH):#{settings[:bindir]}"
   end
 
   pkg.configure do

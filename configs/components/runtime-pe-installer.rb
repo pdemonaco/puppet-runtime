@@ -19,7 +19,7 @@ component "runtime-pe-installer" do |pkg, settings, platform|
 
   else # Linux and Solaris systems
     libbase = platform.architecture =~ /64/ ? 'lib64' : 'lib'
-    libdir = "/opt/pl-build-tools/#{libbase}"
+    libdir = "/usr/#{libbase}"
     pkg.add_source "file://resources/files/runtime/runtime.sh"
     pkg.install do
       "bash runtime.sh #{libdir}"

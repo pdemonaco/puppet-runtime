@@ -34,7 +34,7 @@ pkg.build_requires "libsepol"
 pkg.build_requires "libsepol-devel"
 pkg.build_requires "libselinux-devel"
 
-cc = "/opt/pl-build-tools/bin/gcc"
+cc = "/usr/bin/cc"
 system_include = "-I/usr/include"
 ruby = "#{ruby_bindir}/ruby -rrbconfig"
 

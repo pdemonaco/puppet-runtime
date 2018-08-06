@@ -20,7 +20,7 @@ component "runtime-agent" do |pkg, settings, platform|
     # We only need zlib because curl is dynamically linking against zlib
     pkg.build_requires "pl-zlib-#{platform.architecture}"
   else
-    pkg.build_requires "pl-gcc"
+    pkg.build_requires "gcc"
   end
 
   if platform.is_cross_compiled?
@@ -29,7 +29,7 @@ component "runtime-agent" do |pkg, settings, platform|
   elsif platform.is_solaris? || platform.architecture =~ /i\d86/
     libdir = "/opt/pl-build-tools/lib"
   elsif platform.architecture =~ /64/
-    libdir = "/opt/pl-build-tools/lib64"
+    libdir = "/usr/lib64"
   end
 
   # The runtime script uses readlink, which is in an odd place on Solaris systems:

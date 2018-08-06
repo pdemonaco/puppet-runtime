@@ -52,7 +52,7 @@ component 'openssl' do |pkg, settings, platform|
     cflags = settings[:cflags]
     target = 'darwin64-x86_64-cc'
   elsif platform.is_linux?
-    pkg.environment 'PATH', '/opt/pl-build-tools/bin:$(PATH):/usr/local/bin'
+    pkg.environment 'PATH', '$(PATH):/usr/local/bin'
 
     cflags = settings[:cflags]
     ldflags = "#{settings[:ldflags]} -Wl,-z,relro"
@@ -86,7 +86,7 @@ component 'openssl' do |pkg, settings, platform|
       pkg.build_requires 'xutils-dev'
     end
   elsif platform.is_linux?
-    pkg.build_requires 'pl-gcc'
+    pkg.build_requires 'gcc'
   end
 
   #########

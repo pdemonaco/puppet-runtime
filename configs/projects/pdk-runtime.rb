@@ -109,9 +109,9 @@ project 'pdk-runtime' do |proj|
 
   # Define default CFLAGS and LDFLAGS for most platforms, and then
   # tweak or adjust them as needed.
-  proj.setting(:cppflags, "-I#{proj.includedir} -I/opt/pl-build-tools/include")
+  proj.setting(:cppflags, "-I#{proj.includedir} -I/usr/include")
   proj.setting(:cflags, "#{proj.cppflags}")
-  proj.setting(:ldflags, "-L#{proj.libdir} -L/opt/pl-build-tools/lib -Wl,-rpath=#{proj.libdir}")
+  proj.setting(:ldflags, "-L#{proj.libdir} -L/usr/lib -Wl,-rpath=#{proj.libdir}")
 
   if platform.is_windows?
     proj.setting(:gcc_root, "C:/tools/mingw64")

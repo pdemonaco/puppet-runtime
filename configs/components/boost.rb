@@ -43,7 +43,7 @@ component "boost" do |pkg, settings, platform|
   elsif platform.is_macos?
     #
   else
-    pkg.build_requires "pl-gcc"
+    pkg.build_requires "gcc"
     # Various Linux platforms
     case platform.name
     when /el|fedora/
