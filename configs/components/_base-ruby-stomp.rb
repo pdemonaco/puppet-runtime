@@ -23,7 +23,7 @@ else
 end
 
 pkg.url "https://rubygems.org/downloads/stomp-#{pkg.get_version}.gem"
-pkg.mirror "#{settings[:buildsources_url]}/stomp-#{pkg.get_version}.gem"
+#pkg.mirror "#{settings[:buildsources_url]}/stomp-#{pkg.get_version}.gem"
 
 pkg.build_requires "ruby-#{ruby_version}"
 
