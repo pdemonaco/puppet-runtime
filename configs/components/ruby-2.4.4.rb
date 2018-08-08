@@ -35,6 +35,9 @@ component 'ruby-2.4.4' do |pkg, settings, platform|
       sum: '30b729a8397b0ce82a1d45cd00e4bd86',
       target_double: 'aarch64-linux',
     },
+    'ppc64-redhat-linux' => {
+      target_double: 'powerpc64-linux',
+    },
     'ppc64le-redhat-linux' => {
       sum: '75f856df15c48c50514c803947f60bf9',
       target_double: 'powerpc64le-linux',

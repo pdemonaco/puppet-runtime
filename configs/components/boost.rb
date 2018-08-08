@@ -4,7 +4,7 @@ component "boost" do |pkg, settings, platform|
   pkg.md5sum "4850fceb3f2222ee011d4f3ea304d2cb"
   # Apparently boost doesn't use dots to version they use underscores....arg
   pkg.url "http://downloads.sourceforge.net/project/boost/boost/#{pkg.get_version}/boost_#{pkg.get_version.gsub('.','_')}.tar.gz"
-  #pkg.mirror "#{settings[:buildsources_url]}/boost_#{pkg.get_version.gsub('.','_')}.tar.gz"
+  pkg.mirror "#{settings[:buildsources_url]}/boost_#{pkg.get_version.gsub('.','_')}.tar.gz"
 
   if platform.is_solaris?
     pkg.apply_patch 'resources/patches/boost/0001-fix-build-for-solaris.patch'
