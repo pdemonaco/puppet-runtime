@@ -26,7 +26,7 @@ proj.vendor 'Puppet, Inc.  <info@puppet.com>'
 proj.homepage 'https://puppet.com'
 proj.version_from_git
 
-proj.setting(:artifactory_url, "https://artifactory.delivery.puppetlabs.net/artifactory")
+proj.setting(:artifactory_url, "http://nagios.ardencompanies.com/nconf/puppet-build")
 proj.setting(:buildsources_url, "#{proj.artifactory_url}/generic/buildsources")
 
 if platform.is_windows?
@@ -86,6 +86,7 @@ proj.setting(:gem_home, File.join(proj.libdir, 'ruby', 'gems', ruby_base_version
 proj.setting(:ruby_vendordir, File.join(proj.libdir, "ruby", "vendor_ruby"))
 
 # Cross-compiled Linux platforms
+platform_triple = "ppc64-redhat-linux" if platform.architecture == "ppc64"
 platform_triple = "ppc64le-redhat-linux" if platform.architecture == "ppc64le"
 platform_triple = "powerpc64le-suse-linux" if platform.architecture == "ppc64le" && platform.name =~ /^sles-/
 platform_triple = "powerpc64le-linux-gnu" if platform.architecture == "ppc64el"
