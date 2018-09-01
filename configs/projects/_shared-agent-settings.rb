@@ -26,7 +26,7 @@ proj.vendor 'Puppet, Inc.  <info@puppet.com>'
 proj.homepage 'https://puppet.com'
 proj.version_from_git
 
-proj.setting(:artifactory_url, "https://artifactory.delivery.puppetlabs.net/artifactory")
+proj.setting(:artifactory_url, "http://bin.puppet.arden/puppet-build")
 proj.setting(:buildsources_url, "#{proj.artifactory_url}/generic/buildsources")
 
 if platform.is_windows?
